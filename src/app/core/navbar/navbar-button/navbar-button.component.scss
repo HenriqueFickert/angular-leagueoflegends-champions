@@ -1,19 +1,12 @@
-button {
+.block-champion-button {
     background-color: #4699ed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25px;
-    border: none;
-    border-radius: 5px;
+    height: 28px;
 
     a {
         text-decoration: none;
-        padding: 5px;
-        margin: 10px;
-        font-weight: 550;
-        color: #000000;
         text-align: center;
+        color: #000000;
+        font-weight: 550;
         font-size: 11px;
     }
 

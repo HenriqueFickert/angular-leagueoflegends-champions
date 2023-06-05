@@ -7,6 +7,9 @@ import { SocialMediaComponent } from './footer/social-media/social-media.compone
 import { RiotLogoComponent } from './navbar/riot-logo/riot-logo.component';
 import { LeagueoflegendsLogoComponent } from './navbar/leagueoflegends-logo/leagueoflegends-logo.component';
 import { NavbarButtonComponent } from './navbar/navbar-button/navbar-button.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { NavbarButtonComponent } from './navbar/navbar-button/navbar-button.comp
     NavbarButtonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   exports: [
     FooterComponent,

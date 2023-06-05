@@ -1,0 +1,10 @@
+.block-home-container {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, transparent 20%, #f7f7f7 20%, #f7f7f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #f7f7f7 20%, #f7f7f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#d1d1d1 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #d1d1d1 2px, #f7f7f7 2px) -1px 0;
+    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+
+    &__white-area {
+        height: 195px;
+    }
+}

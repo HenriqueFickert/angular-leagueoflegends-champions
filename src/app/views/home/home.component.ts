@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  public roleTitle: any = {
+    top: 'TITLE TOP',
+    bot: 'TITLE BOTTOM'
+  };
+
 }
