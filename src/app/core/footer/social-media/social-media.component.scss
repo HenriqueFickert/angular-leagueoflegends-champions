@@ -1,0 +1,17 @@
+.block-social-media-container {
+    width: auto;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+
+    a>svg {
+        fill: white;
+        height: 25px;
+        margin: 5px;
+        cursor: pointer;
+
+        &:hover {
+            fill: rgb(200, 200, 200);
+        }
+    }
+}
