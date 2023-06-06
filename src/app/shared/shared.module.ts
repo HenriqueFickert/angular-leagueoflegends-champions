@@ -5,6 +5,7 @@ import { TitleComponent } from './title/title.component';
 import { TitleP1Component } from './title/title-p1/title-p1.component';
 import { TitleP2Component } from './title/title-p2/title-p2.component';
 import { CardComponent } from './card/card.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CardComponent } from './card/card.component';
     CardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatCardModule
   ],
   exports: [
     BannerComponent,
