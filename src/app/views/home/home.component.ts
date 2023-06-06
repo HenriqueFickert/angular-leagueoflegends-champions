@@ -12,4 +12,6 @@ export class HomeComponent {
     bot: 'TITLE BOTTOM'
   };
 
+  public roleSubtitle: string = "Com mais de 140 Campeões, você encontrará a combinação perfeita para seu estilo de jogo. Especialize-se em um estilo ou em todos.";
+
 }

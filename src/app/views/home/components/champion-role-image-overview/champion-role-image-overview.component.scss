@@ -1,0 +1,20 @@
+.block-role-image-container {
+    position: relative;
+
+    &__role-image {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        opacity: 0.15;
+    }
+
+    &__champion-role-image {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}

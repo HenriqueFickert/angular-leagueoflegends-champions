@@ -6,6 +6,7 @@ import { TitleP1Component } from './title/title-p1/title-p1.component';
 import { TitleP2Component } from './title/title-p2/title-p2.component';
 import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
+import { SubtitleComponent } from './subtitle/subtitle.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
     TitleComponent,
     TitleP1Component,
     TitleP2Component,
+    SubtitleComponent,
     CardComponent
   ],
   imports: [
@@ -22,6 +24,7 @@ import { MatCardModule } from '@angular/material/card';
   exports: [
     BannerComponent,
     TitleComponent,
+    SubtitleComponent,
     CardComponent
   ]
 })
