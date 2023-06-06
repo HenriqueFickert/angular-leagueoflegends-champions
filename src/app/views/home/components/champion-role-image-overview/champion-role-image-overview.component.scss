@@ -1,10 +1,13 @@
 .block-role-image-container {
     position: relative;
 
-    &__role-image {
+    img {
         height: 100%;
         width: 100%;
         object-fit: contain;
+    }
+
+    &__role-image {
         opacity: 0.15;
     }
 
@@ -13,8 +16,5 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
     }
 }
