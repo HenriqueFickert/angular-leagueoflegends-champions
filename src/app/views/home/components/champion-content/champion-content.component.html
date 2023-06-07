@@ -5,7 +5,7 @@
     </div>
 
     <div class="champion-content__card-container">
-        <app-card [card]="card"></app-card>
+        <app-card *ngFor="let card of cards" [card]="card"></app-card>
     </div>
     <app-btn-show-more [btnText]="btnText"></app-btn-show-more>
 </div>

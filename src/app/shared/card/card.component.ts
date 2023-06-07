@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { card } from 'src/app/models/card';
+import { champion } from 'src/app/models/responses/champion';
 
 @Component({
   selector: 'app-card',
@@ -8,6 +9,6 @@ import { card } from 'src/app/models/card';
 })
 export class CardComponent {
 
-  @Input() public card: card | undefined;
+  @Input() public card: champion | undefined;
 
 }
