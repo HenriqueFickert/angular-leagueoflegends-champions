@@ -1,0 +1,24 @@
+.champion-content {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0;
+
+    &__title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+
+        app-subtitle {
+            max-width: 70%;
+        }
+    }
+
+    &__card-container {
+        margin: 35px 0px
+    }
+}

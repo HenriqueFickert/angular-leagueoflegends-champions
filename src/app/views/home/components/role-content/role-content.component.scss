@@ -1,0 +1,37 @@
+.role-content {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+
+    &__title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+
+        app-subtitle {
+            max-width: 70%;
+        }
+    }
+
+    &__content-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+        margin: 35px;
+
+        app-champion-role-text {
+            width: 50%;
+        }
+
+        app-champion-role-image {
+            width: 35%;
+            margin: 15px;
+        }
+    }
+}
