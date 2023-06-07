@@ -1,4 +1,4 @@
-.block-role-image-container {
+.role-image-container {
     position: relative;
 
     img {
@@ -7,11 +7,11 @@
         object-fit: contain;
     }
 
-    &__role-image {
+    &__background {
         opacity: 0.15;
     }
 
-    &__champion-role-image {
+    &__image {
         transform: translate(-50%, -50%);
         position: absolute;
         top: 50%;

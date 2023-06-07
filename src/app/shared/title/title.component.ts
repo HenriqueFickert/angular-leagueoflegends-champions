@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { title } from 'src/app/models/title';
 
 @Component({
   selector: 'app-title',
@@ -6,9 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./title.component.scss']
 })
 export class TitleComponent {
-  @Input()
-  public titleTop: string = '';
 
-  @Input()
-  public titleBot: string = '';
+  @Input() public title: title | undefined;
+
 }

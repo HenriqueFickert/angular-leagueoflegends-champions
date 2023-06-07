@@ -1,9 +1,8 @@
-<mat-card class="block-card">
+<mat-card class="card">
     <mat-card-content>
-        <img mat-card-image src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Ahri_0.jpg"
-            alt="champion-splash" draggable="false" />
+        <img mat-card-image src="{{card?.image}}" alt='champion-splash-{{card?.name}}' draggable="false" />
     </mat-card-content>
-    <mat-card-footer class="block-card__footer">
-        <mat-card-title>Ahri</mat-card-title>
+    <mat-card-footer class="card__footer">
+        <mat-card-title>{{card?.name}}</mat-card-title>
     </mat-card-footer>
 </mat-card>

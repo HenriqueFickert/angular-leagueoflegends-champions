@@ -1,31 +1,33 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BannerComponent } from './banner/banner.component';
-import { TitleComponent } from './title/title.component';
-import { TitleP1Component } from './title/title-p1/title-p1.component';
-import { TitleP2Component } from './title/title-p2/title-p2.component';
+import { TitleComponent } from './title/title.component'
 import { CardComponent } from './card/card.component';
-import { MatCardModule } from '@angular/material/card';
 import { SubtitleComponent } from './subtitle/subtitle.component';
+import { BtnShowMoreComponent } from './btn-show-more/btn-show-more.component';
+
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     BannerComponent,
     TitleComponent,
-    TitleP1Component,
-    TitleP2Component,
     SubtitleComponent,
-    CardComponent
+    CardComponent,
+    BtnShowMoreComponent
   ],
   imports: [
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   exports: [
     BannerComponent,
     TitleComponent,
     SubtitleComponent,
-    CardComponent
+    CardComponent,
+    BtnShowMoreComponent
   ]
 })
 export class SharedModule { }

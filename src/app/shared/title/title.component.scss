@@ -1,10 +1,22 @@
-.block-title-container {
+.title-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    app-title-p2 {
+    &__title-top {
+        font-size: 18px;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+
+    &__title-bot {
         margin: 10px;
+        font-size: 75px;
+        font-weight: 600;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
     }
 }

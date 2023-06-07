@@ -1,4 +1,4 @@
-.block-card {
+.card {
     clip-path: polygon(0 0, 93% 0, 100% 5%, 100% 100%, 0 100%);
     display: flex;
     align-items: center;
@@ -53,7 +53,7 @@
             transition: 0.5s;
         }
 
-        .block-card__footer {
+        .card__footer {
             background: #4699ed;
             transition: 0.5s;
             border-top: 1px solid white;

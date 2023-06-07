@@ -2,12 +2,12 @@ import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import { ChampionRoleImageOverviewComponent } from './components/champion-role-image-overview/champion-role-image-overview.component';
+import { ChampionRoleImageComponent } from './components/champion-role-image/champion-role-image.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ChampionRoleImageOverviewComponent
+    ChampionRoleImageComponent
   ],
   imports: [
     CommonModule,
