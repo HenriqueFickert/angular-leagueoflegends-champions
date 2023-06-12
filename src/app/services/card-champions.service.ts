@@ -1,7 +1,9 @@
+import { champion } from 'src/app/models/responses/champion';
+import { championObject, data } from '../models/responses/champion-object';
+import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { BaseService } from './base.service';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -10,16 +12,29 @@ export class CardChampionsService extends BaseService {
 
   constructor(http: HttpClient) { super(http) }
 
-  getAll<obj>(url: string): Observable<obj> {
-    return this.getData<obj>(`${url}`);
+  // getAll<championObject>(url: string): Observable<championObject> {
+  //   return this.getData<championObject>(`${url}`);
+  // }
+
+  public getImageUrl(): string {
+    return this.urlImage;
   }
 
-  // Padrão
-  // getAll<obj>(url: string) : Observable<obj> {
-  //   return this.http.get<obj>(`${this.urlApi}${url}`);
-  // }  
+  public getChampions(url: string): Observable<champion[]> {
+    return this.getData<championObject>(url).pipe(map(data => this.filterChampionsRequest(data)));
+  }
 
-  // Generico
-  // public getAll<T>(url: string): Observable<T> {
-  //     return this.http.get<T>(`${this.urlApi}${url}`)}
+  private filterChampionsRequest(championObject: championObject): champion[] {
+    const response: data = championObject.data;
+    let champions: champion[] = [];
+
+    for (const championName in response) {
+      if (response.hasOwnProperty(championName)) {
+        const champion: champion = response[championName];
+        champions.push(champion);
+      }
+    }
+
+    return champions;
+  }
 }

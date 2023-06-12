@@ -10,5 +10,6 @@ import { champion } from 'src/app/models/responses/champion';
 export class CardComponent {
 
   @Input() public card: champion | undefined;
+  @Input() public urlImage: string = '';
 
 }

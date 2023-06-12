@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { champion } from 'src/app/models/responses/champion';
-import { data } from 'src/app/models/responses/data';
-import { obj } from 'src/app/models/responses/obj';
+import { championObject, data } from 'src/app/models/responses/champion-object';
 import { title } from 'src/app/models/title';
 import { CardChampionsService } from 'src/app/services/card-champions.service';
 
@@ -22,37 +21,20 @@ export class ChampionContentComponent implements OnInit {
   public roleSubtitle: string = "Com mais de 140 Campeões, você encontrará a combinação perfeita para seu estilo de jogo. Especialize-se em um estilo ou em todos.";
   public btnText: string = 'MOSTRAR MAIS';
 
-  cards: champion[] = [];
+  champions: champion[] = [];
+  urlImage: string = '';
 
   ngOnInit() {
     this.getAllCards();
+    this.urlImage = this.cardService.getImageUrl();
   }
 
   getAllCards() {
-    this.cardService.getAll<obj>('champion.json').subscribe({
-      next: (data: obj) => {
-
-        const response: data = data.data;
-
-        for (const championName in response) {
-          if (response.hasOwnProperty(championName)) {
-            const champion: champion = response[championName];
-            this.cards.push(champion);
-          }
-        }
-
-
-
+    this.cardService.getChampions('champion.json').subscribe({
+      next: (data: champion[]) => {
+        this.champions = data;
       },
       error: (error) => console.error(error)
     });
   }
-
 }
-
-
-  // public card: card = {
-  //   id: 'ahri',
-  //   name: 'Ahri',
-  //   image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Ahri_0.jpg '
-  // }

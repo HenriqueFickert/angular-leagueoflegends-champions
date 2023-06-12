@@ -34,4 +34,30 @@
             margin: 15px;
         }
     }
+
+    @media screen and (max-width: 995px) {
+        app-champion-role-text {
+            text-align: center;
+        }
+
+        .role-content__content-container {
+            flex-direction: column;
+
+            app-champion-role-text {
+                width: 100%;
+            }
+
+            app-champion-role-image {
+                width: 70%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .role-content__content-container {
+            app-champion-role-image {
+                width: 90%;
+            }
+        }
+    }
 }

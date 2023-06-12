@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class BaseService {
   protected urlApi: string = environment.urlApi;
+  protected urlImage: string = environment.urlImage;
 
   constructor(private http: HttpClient) { }
 
