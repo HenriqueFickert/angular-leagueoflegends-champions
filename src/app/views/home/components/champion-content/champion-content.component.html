@@ -5,7 +5,7 @@
     </div>
 
     <div class="champion-content__card-container">
-        <app-card *ngFor="let champion of champions" [urlImage]="urlImage" [card]="champion"></app-card>
+        <app-card *ngFor="let champion of displayedChampions" [urlImage]="urlImage" [card]="champion"></app-card>
     </div>
-    <app-btn-show-more [btnText]="btnText"></app-btn-show-more>
+    <app-btn-show-more [btnText]="btnText" (click)="showMoreButton()"></app-btn-show-more>
 </div>
