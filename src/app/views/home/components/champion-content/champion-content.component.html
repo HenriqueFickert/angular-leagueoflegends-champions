@@ -7,5 +7,5 @@
     <div class="champion-content__card-container">
         <app-card *ngFor="let champion of displayedChampions" [urlImage]="urlImage" [card]="champion"></app-card>
     </div>
-    <app-btn-show-more [btnText]="btnText" (click)="showMoreButton()"></app-btn-show-more>
+    <app-btn-show-more *ngIf="showButton" [btnText]="btnText" (click)="showMoreButton()"></app-btn-show-more>
 </div>

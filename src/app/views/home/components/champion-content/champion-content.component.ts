@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { champion } from 'src/app/models/responses/champion';
-import { championObject, data } from 'src/app/models/responses/champion-object';
 import { title } from 'src/app/models/title';
 import { CardChampionsService } from 'src/app/services/card-champions.service';
 
@@ -10,6 +9,7 @@ import { CardChampionsService } from 'src/app/services/card-champions.service';
   styleUrls: ['./champion-content.component.scss']
 })
 export class ChampionContentComponent implements OnInit {
+
   public roleTitle: title = {
     top: 'ESCOLHA SEU',
     bot: 'CAMPEÃO'
@@ -19,6 +19,7 @@ export class ChampionContentComponent implements OnInit {
   public btnText: string = 'MOSTRAR MAIS';
 
   public urlImage: string = '';
+  public showButton: boolean = true;
   public displayedChampions: champion[] = [];
   private champions: champion[] = [];
   private currentPage: number = 1;
@@ -53,6 +54,9 @@ export class ChampionContentComponent implements OnInit {
     if (this.currentPage < totalPages) {
       this.currentPage++;
       this.displayedChampions.push(...this.getCurrentPage());
+
+      if (this.currentPage == totalPages)
+        this.showButton = false;
     }
   }
 }
