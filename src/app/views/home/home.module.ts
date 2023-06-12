@@ -6,6 +6,7 @@ import { ChampionRoleImageComponent } from './components/champion-role-image/cha
 import { ChampionRoleTextComponent } from './components/champion-role-text/champion-role-text.component';
 import { RoleContentComponent } from './components/role-content/role-content.component';
 import { ChampionContentComponent } from './components/champion-content/champion-content.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ChampionContentComponent } from './components/champion-content/champion
   ],
   imports: [
     CommonModule,
+    MatTabsModule,
     SharedModule
   ]
 })

@@ -5,17 +5,3 @@ $mobile: "(max-width: 767px)";
 
 $xtablet: "(max-width: 992px)";
 $tablet: "(max-width: 1200px)";
-
-.showmobile {
-    display: none !important;
-
-    @media #{$mobile} {
-        display: block !important;
-    }
-}
-
-.hidemobile {
-    @media #{$mobile} {
-        display: none !important;
-    }
-}

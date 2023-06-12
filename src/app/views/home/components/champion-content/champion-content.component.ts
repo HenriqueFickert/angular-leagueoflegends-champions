@@ -18,7 +18,7 @@ export class ChampionContentComponent implements OnInit {
     bot: 'CAMPEÃO'
   };
 
-  public roleSubtitle: string = "Com mais de 140 Campeões, você encontrará a combinação perfeita para seu estilo de jogo. Especialize-se em um estilo ou em todos.";
+  public roleSubtitle: string = "Com 6 estilos únicos de jogo, cada um com sua estratégia e papel específico, você descobrirá o campeão perfeito para sua preferência no League of Legends.";
   public btnText: string = 'MOSTRAR MAIS';
 
   champions: champion[] = [];
