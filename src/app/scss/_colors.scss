@@ -1,0 +1,57 @@
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+
+$primary-palette: (
+    A300: #0655a9,
+    A400: #0d5379,
+    contrast: (A300: white,
+    )
+);
+
+$accent-palette: (
+    A100: #fff619,
+    contrast: (A300: white,
+    )
+);
+
+$warn-palette: (
+    A100:#ff7e8c,
+    A200: #e84a5f,
+    A300: #b00136,
+    contrast: (A100: map-get($map: $primary-palette, $key: A200),
+        A200: white,
+        A300: white,
+    )
+);
+
+$gray: #ececec;
+$highlight: #FBED17;
+$info-light: #c7f1ff;
+$info: #0a5975;
+$atention-light: #fffedf;
+$atention: #b8a04e;
+$danger-light: #ffe1e1;
+$danger: #b74f4f;
+$white: #fff;
+$gray: rgb(85 85 85);
+$alert: rgb(231 238 247);
+
+$primary: map-get($map: $primary-palette, $key: A300);
+$primary-dark: map-get($map: $primary-palette, $key: A400);
+$primary-contrast: map-deep-get($primary-palette, contrast, A300);
+
+$accent-light: map-get($map: $accent-palette, $key: A100);
+$accent-midle: map-get($map: $accent-palette, $key: A200);
+$accent: map-get($map: $accent-palette, $key: A300);
+$accent-dark: map-get($map: $accent-palette, $key: A400);
+$accent-contrast: map-deep-get($accent-palette, contrast, A300);
+
+$warn: map-get($map: $warn-palette, $key: A300);
+$warn-contrast: map-deep-get($warn-palette, contrast, A300);
+
+$gradient-primary: linear-gradient(45deg, $accent 0%, $primary 100%);
