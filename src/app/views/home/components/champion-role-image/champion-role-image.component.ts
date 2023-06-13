@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { roleChampionImage } from 'src/app/models/role-champion-image';
+import { roleChampionImage } from 'src/app/models/role';
 
 @Component({
   selector: 'app-champion-role-image',

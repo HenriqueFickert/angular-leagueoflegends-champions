@@ -4,8 +4,13 @@
         <app-subtitle [subtitle]="roleSubtitle"></app-subtitle>
     </div>
 
-    <div class="role-content__content-container">
-        <app-champion-role-text [roleChampionText]="roleChampionText"></app-champion-role-text>
-        <app-champion-role-image [roleChampionImage]="roleChampionImage"></app-champion-role-image>
-    </div>
+    <mat-tab-group animationDuration="500ms" color="warn">
+        <mat-tab label={{item.roleText.title}} *ngFor="let item of listRoleChampions">
+            <div class="role-content__content-container">
+                <app-champion-role-text [roleChampionText]="item.roleText"></app-champion-role-text>
+                <app-champion-role-image [roleChampionImage]=" item.roleImage"></app-champion-role-image>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
 </div>

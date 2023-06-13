@@ -1,12 +1,35 @@
 @import "../../../../scss/global.scss";
 
+::ng-deep {
+    .mat-mdc-tab-body-content {
+        overflow: hidden !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    mat-tab-group {
+        width: 80%;
+        margin-top: 35px;
+    }
+
+    .mat-mdc-tab {
+        max-height: 40px;
+    }
+
+    .mdc-tab__text-label {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
 .role-content {
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 35px;
+    padding: 30px 0px;
 
     &__title-container {
         display: flex;
@@ -25,7 +48,7 @@
         justify-content: center;
         align-items: center;
         max-width: 80%;
-        margin: 35px;
+        margin: 30px;
 
         app-champion-role-text {
             width: 50%;
@@ -33,7 +56,7 @@
 
         app-champion-role-image {
             width: 35%;
-            margin: 15px;
+            margin: 0px 0px 15px 15px;
         }
     }
 
@@ -51,6 +74,7 @@
 
             app-champion-role-image {
                 width: 70%;
+                margin: 15px;
             }
         }
     }

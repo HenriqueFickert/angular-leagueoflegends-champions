@@ -1,5 +1,5 @@
-import { roleChampionText } from './../../../../models/role-champion-text';
 import { Component, Input } from '@angular/core';
+import { roleChampionText } from 'src/app/models/role';
 
 @Component({
   selector: 'app-champion-role-text',
