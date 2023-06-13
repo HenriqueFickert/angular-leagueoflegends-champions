@@ -3,7 +3,6 @@ import { MatTabGroup } from '@angular/material/tabs';
 import { role } from 'src/app/models/role';
 import { title } from 'src/app/models/title';
 
-
 @Component({
   selector: 'app-role-content',
   templateUrl: './role-content.component.html',
