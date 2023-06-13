@@ -101,7 +101,7 @@ export class RoleContentComponent implements OnInit {
     this.inicializeInterval();
   }
 
-  automaticChangeTab() {
+  private automaticChangeTab() {
     const tabLength = this.tabGroup?._tabs.length || 0;
     this.selectedTabIndex++;
     this.changeTimerInverval(5000);
@@ -110,7 +110,7 @@ export class RoleContentComponent implements OnInit {
       this.selectedTabIndex = 0;
   }
 
-  onTabSelected(event: any) {
+  public onTabSelected(event: any) {
     if (event !== this.selectedTabIndex)
       this.changeTimerInverval(10000);
 
