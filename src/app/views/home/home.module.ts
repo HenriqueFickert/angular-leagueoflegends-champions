@@ -7,7 +7,6 @@ import { ChampionRoleTextComponent } from './components/champion-role-text/champ
 import { RoleContentComponent } from './components/role-content/role-content.component';
 import { ChampionContentComponent } from './components/champion-content/champion-content.component';
 import { MatTabsModule } from '@angular/material/tabs';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
   imports: [
     CommonModule,
     MatTabsModule,
-    MatButtonToggleModule,
     SharedModule
   ]
 })

@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTabGroup } from '@angular/material/tabs';
 import { role } from 'src/app/models/role';
 import { title } from 'src/app/models/title';
+
 
 @Component({
   selector: 'app-role-content',
   templateUrl: './role-content.component.html',
   styleUrls: ['./role-content.component.scss']
 })
-export class RoleContentComponent {
+export class RoleContentComponent implements OnInit {
   public roleTitle: title = {
     top: 'ESCOLHA SEU',
     bot: 'ESTILO'
@@ -15,7 +17,7 @@ export class RoleContentComponent {
 
   public roleSubtitle: string = "Com mais de 140 Campeões, você encontrará a combinação perfeita para seu estilo de jogo. Especialize-se em um estilo ou em todos.";
 
-  listRoleChampions: role[] = [
+  public listRoleChampions: role[] = [
     {
       roleImage: {
         background: "./assets/img/role-icons/assassin-silver.png",
@@ -77,4 +79,41 @@ export class RoleContentComponent {
       }
     }
   ];
+
+  public selectedTabIndex: number = 0;
+  @ViewChild(MatTabGroup) private tabGroup: MatTabGroup | undefined;
+  private tabTimer: number = 5000;
+  private intervalId: any;
+
+  ngOnInit() {
+    this.inicializeInterval();
+  }
+
+  private inicializeInterval() {
+    this.intervalId = setInterval(() => {
+      this.automaticChangeTab();
+    }, this.tabTimer);
+  }
+
+  private changeTimerInverval(newTimerValue: number) {
+    clearInterval(this.intervalId);
+    this.tabTimer = newTimerValue;
+    this.inicializeInterval();
+  }
+
+  automaticChangeTab() {
+    const tabLength = this.tabGroup?._tabs.length || 0;
+    this.selectedTabIndex++;
+    this.changeTimerInverval(5000);
+
+    if (this.selectedTabIndex >= tabLength)
+      this.selectedTabIndex = 0;
+  }
+
+  onTabSelected(event: any) {
+    if (event !== this.selectedTabIndex)
+      this.changeTimerInverval(10000);
+
+    this.selectedTabIndex = event;
+  }
 }

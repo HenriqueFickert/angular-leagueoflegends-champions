@@ -4,7 +4,8 @@
         <app-subtitle [subtitle]="roleSubtitle"></app-subtitle>
     </div>
 
-    <mat-tab-group animationDuration="500ms" color="$primary">
+    <mat-tab-group animationDuration="500ms" color="$primary" [selectedIndex]="selectedTabIndex"
+        (selectedIndexChange)="onTabSelected($event)">
         <mat-tab label={{item.roleText.title}} *ngFor="let item of listRoleChampions">
             <div class="role-content__content-container">
                 <app-champion-role-text [roleChampionText]="item.roleText"></app-champion-role-text>
