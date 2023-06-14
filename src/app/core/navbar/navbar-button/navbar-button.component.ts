@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar-button.component.scss']
 })
 export class NavbarButtonComponent {
-
+  scrollToSection(sectionId: string) {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
