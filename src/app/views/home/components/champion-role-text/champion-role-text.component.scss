@@ -7,14 +7,25 @@
 
     h1 {
         font-family: inherit;
-        letter-spacing: .5px;
+        letter-spacing: 0.8px;
         font-style: bold;
-        font-size: 25px;
+        font-size: 23px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            width: 25px;
+            border-bottom: 1px solid var(--gold);
+            margin: 10px;
+        }
     }
 
     p {
         color: var(--graphite);
         font-family: inherit;
+        letter-spacing: .4px;
         font-size: 14px;
         padding-top: 14px;
     }
