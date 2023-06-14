@@ -1,9 +1,9 @@
 a>svg {
     height: 28px;
     width: auto;
-    fill: white;
+    fill: var(--white);
 
     &:hover {
-        fill: rgb(200, 200, 200);
+        fill: var(--gray);
     }
 }

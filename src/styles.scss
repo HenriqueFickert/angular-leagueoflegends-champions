@@ -11,8 +11,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$angular-leagueoflegends-champions-primary: mat.define-palette(mat.$indigo-palette);
-$angular-leagueoflegends-champions-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$angular-leagueoflegends-champions-primary: mat.define-palette($primary-color-palette);
+$angular-leagueoflegends-champions-accent: mat.define-palette($accent-color-palette);
 
 // The warn palette is optional (defaults to red).
 $angular-leagueoflegends-champions-warn: mat.define-palette(mat.$red-palette);
@@ -43,6 +43,14 @@ html {
 }
 
 body {
+    --primary: #{$primary};
+    --white: #{$white};
+    --light-gray: #{$light-gray};
+    --gray: #{$gray};
+    --dark-gray: #{$dark-gray};
+    --graphite: #{$graphite};
+    --black: #{$black};
+
     height: 100%;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     font-size: 1.6rem;

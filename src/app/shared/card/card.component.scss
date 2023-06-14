@@ -23,7 +23,7 @@
     }
 
     &__footer {
-        background: #000000;
+        background: var(--black);
         display: flex;
         align-items: center;
         position: absolute;
@@ -38,7 +38,7 @@
             font-weight: bold;
             font-style: italic;
             font-size: 18px;
-            color: white;
+            color: var(--white);
             transition: 0.5s;
         }
     }
@@ -53,8 +53,8 @@
         }
 
         .card__footer {
-            background: #4699ed;
-            border-top: 1px solid white;
+            background: var(--primary);
+            border-top: 1px solid var(--white);
             transition: 0.5s;
 
             mat-card-title {

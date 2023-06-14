@@ -24,7 +24,7 @@
 }
 
 .role-content {
-    background-color: white;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,7 +47,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 80%;
+        max-width: 100%;
         margin-top: 30px;
 
         app-champion-role-text {

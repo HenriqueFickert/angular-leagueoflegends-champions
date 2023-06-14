@@ -5,13 +5,13 @@
     justify-content: center;
 
     a>svg {
-        fill: white;
+        fill: var(--white);
         height: 25px;
         margin: 5px;
         cursor: pointer;
 
         &:hover {
-            fill: rgb(200, 200, 200);
+            fill: var(--gray);
         }
     }
 }

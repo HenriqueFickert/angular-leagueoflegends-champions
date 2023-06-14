@@ -1,16 +1,7 @@
 .champion-button {
-    background-color: #4699ed;
     height: 28px;
-
-    a {
-        text-decoration: none;
-        text-align: center;
-        color: #000000;
-        font-weight: 550;
-        font-size: 11px;
-    }
-
-    &:hover {
-        background-color: #3a7dc0;
-    }
+    text-decoration: none;
+    text-align: center;
+    font-weight: 550;
+    font-size: 11px;
 }
