@@ -12,5 +12,4 @@ export class BannerComponent {
   onLoaded() {
     this.isLoaded = true;
   }
-
 }

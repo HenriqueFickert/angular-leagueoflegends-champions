@@ -1,5 +1,6 @@
 img {
     width: 100%;
+    height: auto;
 }
 
 img:empty {
@@ -8,8 +9,11 @@ img:empty {
     background-repeat: repeat-y;
     background-size: 50px 100%;
     animation: skeleton 1.5s infinite;
-    min-height: 350px;
     min-width: 100%;
+}
+
+.minHeight {
+    min-height: 350px;
 }
 
 @keyframes skeleton {
