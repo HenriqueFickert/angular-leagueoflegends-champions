@@ -6,7 +6,7 @@
     border-radius: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     cursor: pointer;
 
     mat-card-content {
@@ -52,7 +52,7 @@
         mat-card-content>img {
             -moz-transition: transform 0.5s;
             transition: 0.5s;
-            transform: scale(1.10);
+            transform: scale(1.11);
         }
 
         .card__footer {
