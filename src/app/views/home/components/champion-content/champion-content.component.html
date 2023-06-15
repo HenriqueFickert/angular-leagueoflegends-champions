@@ -4,7 +4,9 @@
         <app-subtitle [subtitle]="roleSubtitle"></app-subtitle>
     </div>
 
-    <div class="champion-content__card-container">
+
+    <mat-spinner class="champion-content__spinner" *ngIf=" !loadedContent"></mat-spinner>
+    <div *ngIf="loadedContent" class="champion-content__card-container">
         <app-card *ngFor="let champion of displayedChampions" [urlImage]="urlImage" [card]="champion"></app-card>
     </div>
     <app-btn-show-more *ngIf="showButton" [btnText]="btnText" (click)="showMoreButton()"></app-btn-show-more>

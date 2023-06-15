@@ -6,6 +6,7 @@ import { CardComponent } from './card/card.component';
 import { SubtitleComponent } from './subtitle/subtitle.component';
 import { BtnShowMoreComponent } from './btn-show-more/btn-show-more.component';
 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -20,7 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     BannerComponent,

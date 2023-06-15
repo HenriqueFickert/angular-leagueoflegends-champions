@@ -23,7 +23,7 @@ export class RoleContentComponent implements OnInit {
         image: "./assets/img/renders/akali-render.png"
       },
       roleText: {
-        title: "Assassino",
+        title: "Assassinos",
         descriptions: ['O assassino no League of Legends é um personagem que se destaca pela sua habilidade em eliminar rapidamente seus adversários. Com uma combinação letal de velocidade, agilidade e dano explosivo, o assassino é capaz de causar um grande impacto no jogo.', 'Seu estilo de jogo é geralmente focado em emboscadas e flanqueamento, utilizando sua mobilidade para se aproximar do inimigo e causar dano em curto espaço de tempo. Com a habilidade de eliminar alvos prioritários, o assassino é uma escolha popular para jogadores que buscam dominar o mapa e criar pressão constante em seus adversários.']
       }
     },
@@ -63,7 +63,7 @@ export class RoleContentComponent implements OnInit {
         image: "./assets/img/renders/lulu-render.png"
       },
       roleText: {
-        title: "Suporte",
+        title: "Suportes",
         descriptions: ['Os suportes no League of Legends são personagens especializados em fornecer auxílio e proteção a seus aliados. Com habilidades que podem curar, conceder escudos e controlar a equipe inimiga, os suportes são fundamentais para garantir a sobrevivência e o sucesso de seus aliados.', 'Seu estilo de jogo é geralmente focado em posição e estratégia, utilizando suas habilidades de suporte para garantir a vantagem em lutas em equipe e controlar objetivos. Com habilidades que podem atordoar, silenciar ou enraizar seus adversários, os suportes são escolhas populares para jogadores que buscam garantir a vantagem da equipe e proteger seus aliados.']
       }
     },

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class BannerComponent {
 
+  public isLoaded: boolean = false;
+
+  onLoaded() {
+    this.isLoaded = true;
+  }
+
 }

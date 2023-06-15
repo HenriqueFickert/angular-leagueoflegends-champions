@@ -1,4 +1,19 @@
 img {
     width: 100%;
-    height: auto;
+}
+
+img:empty {
+    background-color: var(--light-gray);
+    background-image: linear-gradient(100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%);
+    background-repeat: repeat-y;
+    background-size: 50px 100%;
+    animation: skeleton 1.5s infinite;
+    min-height: 350px;
+    min-width: 100%;
+}
+
+@keyframes skeleton {
+    to {
+        background-position: 120% 0;
+    }
 }

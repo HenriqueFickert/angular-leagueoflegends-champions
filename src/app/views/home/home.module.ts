@@ -8,6 +8,7 @@ import { RoleContentComponent } from './components/role-content/role-content.com
 import { ChampionContentComponent } from './components/champion-content/champion-content.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { HomeRoutingModule } from './home-routing.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeRoutingModule } from './home-routing.module';
     CommonModule,
     MatTabsModule,
     HomeRoutingModule,
+    MatProgressSpinnerModule,
     SharedModule
   ]
 })

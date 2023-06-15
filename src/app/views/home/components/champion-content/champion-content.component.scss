@@ -19,13 +19,14 @@
         }
     }
 
+    &__spinner {
+        margin: 35px 0px;
+    }
+
     &__card-container {
         grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
         display: grid;
         gap: 20px;
-        justify-content: center;
-        align-content: center;
-        list-style-type: none;
         margin: 35px 0px;
         max-width: 75%;
     }

@@ -25,6 +25,8 @@ export class ChampionContentComponent implements OnInit {
   private currentPage: number = 1;
   private pageSize: number = 16;
 
+  public loadedContent: boolean = false;
+
   constructor(private cardService: CardChampionsService) {
     this.urlImage = this.cardService.getImageUrl();
   }
@@ -38,6 +40,7 @@ export class ChampionContentComponent implements OnInit {
       next: (data: champion[]) => {
         this.champions = data;
         this.displayedChampions = this.getCurrentPage();
+        this.loadedContent = true;
       },
       error: (error) => console.error(error)
     });

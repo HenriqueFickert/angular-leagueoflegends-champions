@@ -11,5 +11,10 @@ export class CardComponent {
 
   @Input() public card: champion | undefined;
   @Input() public urlImage: string = '';
+  public isImageLoaded: boolean = false;
 
+  onImageLoad() {
+    this.isImageLoaded = true;
+    console.log('entrou');
+  }
 }
