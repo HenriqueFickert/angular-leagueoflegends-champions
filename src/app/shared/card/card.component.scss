@@ -16,9 +16,11 @@
         padding: 0;
 
         img {
-            width: 115%;
+            -moz-transition: transform 0.5s;
             transition: 0.5s;
+            transform: scale(1.15);
             height: auto;
+            width: 100%;
         }
     }
 
@@ -48,8 +50,9 @@
         transition: 0.3s;
 
         mat-card-content>img {
-            width: 110%;
+            -moz-transition: transform 0.5s;
             transition: 0.5s;
+            transform: scale(1.10);
         }
 
         .card__footer {
