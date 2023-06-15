@@ -1,0 +1,5 @@
+User-agent: Googlebot
+Disallow: /not-for-google
+User-agent: DuckDuckBot
+Disallow: /not-for-duckduckgo
+Sitemap: https://league-of-legends-champions.netlify.app
