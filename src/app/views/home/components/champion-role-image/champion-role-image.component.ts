@@ -8,4 +8,15 @@ import { roleChampionImage } from 'src/app/models/role';
 })
 export class ChampionRoleImageComponent {
   @Input() public roleChampionImage: roleChampionImage | undefined;
+
+  public isLoadedBg: boolean = false;
+  public isLoadedImage: boolean = false;
+
+  onLoadedBg() {
+    this.isLoadedBg = true;
+  }
+
+  onLoadedImage() {
+    this.isLoadedImage = true;
+  }
 }
