@@ -41,6 +41,7 @@ export class ChampionContentComponent implements OnInit {
         this.champions = data;
         this.displayedChampions = this.getCurrentPage();
         this.loadedContent = true;
+        console.log(data);
       },
       error: (error) => console.error(error)
     });

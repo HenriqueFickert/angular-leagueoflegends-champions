@@ -6,5 +6,9 @@
     </mat-card-content>
     <mat-card-footer class="card__footer">
         <mat-card-title>{{card?.name}}</mat-card-title>
+        <div class="card__footer__role-icon-container">
+            <img *ngFor="let tag of card?.tags" [src]="getPathByName(tag)" alt='role-{{tag}}' draggable="false">
+        </div>
+
     </mat-card-footer>
 </mat-card>

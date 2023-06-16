@@ -27,6 +27,7 @@
         background: var(--black);
         display: flex;
         align-items: center;
+        justify-content: left;
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -41,6 +42,23 @@
             font-size: 18px;
             color: var(--white);
             transition: 0.5s;
+        }
+
+        &__role-icon-container {
+            margin: 0 0 0 auto;
+            opacity: 0;
+            transition: opacity 0.5s;
+
+            img {
+                height: 24px;
+                width: auto;
+                margin-left: 5px;
+            }
+
+            img:last-child {
+                transition: 0.5s;
+                margin-right: 0px;
+            }
         }
     }
 
@@ -62,6 +80,16 @@
             mat-card-title {
                 padding-left: 25px;
                 transition: 0.5s;
+            }
+
+            &__role-icon-container {
+                opacity: 1;
+                transition: opacity 0.5s;
+
+                img:last-child {
+                    transition: 0.5s;
+                    margin-right: 10px;
+                }
             }
         }
     }
