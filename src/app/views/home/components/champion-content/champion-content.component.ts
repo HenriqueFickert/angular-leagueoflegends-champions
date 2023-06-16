@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { champion } from 'src/app/models/responses/champion';
 import { title } from 'src/app/models/title';
 import { CardChampionsService } from 'src/app/services/card-champions.service';
@@ -39,8 +40,8 @@ export class ChampionContentComponent implements OnInit {
   options: string[] = Object.values(roleEnums);;
   inicialRoleOptions: string = roleEnums.TodasFuncoes;
   inicialDificultyOptions: string = '';
-  @Input() public inputText: string = '';
 
+  @Input() public inputText: string = '';
 
   roleTags: { [name: string]: string } = {
     Assassinos: "Assassin",
@@ -51,12 +52,28 @@ export class ChampionContentComponent implements OnInit {
     Suportes: "Support"
   };
 
-  constructor(private cardService: CardChampionsService) {
+  form!: FormGroup;
+
+
+  constructor(private cardService: CardChampionsService, private formBuilder: FormBuilder) {
     this.urlImage = this.cardService.getImageUrl();
   }
 
   ngOnInit() {
     this.getAllCards();
+    this.buildForm();
+  }
+
+  buildForm() {
+    this.form = this.formBuilder.group({
+      searchText: [''],
+      roleInput: [''],
+      dificultyInput: ['']
+    });
+
+    this.form.valueChanges.subscribe((data: any) => {
+      console.log(data);
+    })
   }
 
   getAllCards() {
