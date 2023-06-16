@@ -7,11 +7,12 @@
     <div class="champion-content__form-container">
         <mat-form-field color="accent">
             <mat-icon matSuffix>search</mat-icon>
-            <input matInput placeholder="Buscar">
+            <input matInput placeholder="Buscar" [(ngModel)]="inputText" (keyup)="applyFilters()">
         </mat-form-field>
 
         <mat-form-field color="accent">
-            <mat-select placeholder="Todas as Funções" [(value)]="inicialRoleOptions">
+            <mat-select placeholder="Todas as Funções" (selectionChange)="applyFilters()"
+                [(value)]="inicialRoleOptions">
                 <mat-option *ngFor="let option of options" [value]="option"> {{option}}</mat-option>
             </mat-select>
         </mat-form-field>

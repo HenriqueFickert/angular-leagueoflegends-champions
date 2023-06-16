@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { champion } from 'src/app/models/responses/champion';
 import { title } from 'src/app/models/title';
 import { CardChampionsService } from 'src/app/services/card-champions.service';
@@ -39,6 +39,17 @@ export class ChampionContentComponent implements OnInit {
   options: string[] = Object.values(roleEnums);;
   inicialRoleOptions: string = roleEnums.TodasFuncoes;
   inicialDificultyOptions: string = '';
+  @Input() public inputText: string = '';
+
+
+  roleTags: { [name: string]: string } = {
+    Assassinos: "Assassin",
+    Magos: "Mage",
+    Lutadores: "Fighter",
+    Tanques: "Tank",
+    Atiradores: "Marksman",
+    Suportes: "Support"
+  };
 
   constructor(private cardService: CardChampionsService) {
     this.urlImage = this.cardService.getImageUrl();
@@ -80,5 +91,27 @@ export class ChampionContentComponent implements OnInit {
   onCancel(event: Event) {
     event.stopPropagation();
     this.inicialDificultyOptions = '';
+  }
+
+  applyFilters() {
+    let loadedChampions: champion[] = [];
+    console.log('role', this.inicialRoleOptions);
+    console.log('text', this.inputText);
+    loadedChampions = this.filterByRole(this.champions, this.inicialRoleOptions);
+    loadedChampions = this.searchFilter(loadedChampions, this.inputText);
+
+    console.log('loadedChampions', loadedChampions);
+    this.displayedChampions = loadedChampions;
+  }
+
+  filterByRole(data: champion[], role: string) {
+    if (this.roleTags.hasOwnProperty(role))
+      return data.filter(objeto => objeto.tags.includes(this.roleTags[role]));
+    else
+      return data;
+  }
+
+  searchFilter(data: champion[], name: string) {
+    return data.filter(objeto => objeto.name.toLowerCase().trim().includes(name.toLowerCase().trim()) || objeto.name.toLowerCase() == name);
   }
 }
