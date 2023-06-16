@@ -9,6 +9,10 @@ import { ChampionContentComponent } from './components/champion-content/champion
 import { MatTabsModule } from '@angular/material/tabs';
 import { HomeRoutingModule } from './home-routing.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatTabsModule,
     HomeRoutingModule,
     MatProgressSpinnerModule,
+    MatInputModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatSelectModule,
     SharedModule
   ]
 })

@@ -4,6 +4,32 @@
         <app-subtitle [subtitle]="roleSubtitle"></app-subtitle>
     </div>
 
+    <div class="champion-content__form-container">
+        <mat-form-field color="accent">
+            <mat-icon matSuffix>search</mat-icon>
+            <input matInput placeholder="Buscar">
+        </mat-form-field>
+
+        <mat-form-field color="accent">
+            <mat-select placeholder="Todas as Funções" [(value)]="inicialRoleOptions">
+                <mat-option *ngFor="let option of options" [value]="option"> {{option}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field color="accent">
+            <mat-select placeholder="Dificuldade" [(value)]="inicialDificultyOptions">
+                <mat-select-trigger>
+                    <mat-icon>eject</mat-icon>
+                    <button (click)="onCancel($event)"
+                        class="champion-content__form-container__close-button"><mat-icon>cancel</mat-icon></button>
+                </mat-select-trigger>
+                <mat-option value="option"><mat-icon>eject</mat-icon></mat-option>
+                <mat-option value="option"><mat-icon>eject</mat-icon><mat-icon>eject</mat-icon></mat-option>
+                <mat-option
+                    value="option"><mat-icon>eject</mat-icon><mat-icon>eject</mat-icon><mat-icon>eject</mat-icon></mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
 
     <mat-spinner class="champion-content__spinner" *ngIf=" !loadedContent"></mat-spinner>
     <div *ngIf="loadedContent" class="champion-content__card-container">

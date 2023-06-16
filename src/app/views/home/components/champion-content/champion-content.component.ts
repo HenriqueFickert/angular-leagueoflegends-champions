@@ -3,6 +3,15 @@ import { champion } from 'src/app/models/responses/champion';
 import { title } from 'src/app/models/title';
 import { CardChampionsService } from 'src/app/services/card-champions.service';
 
+enum roleEnums {
+  TodasFuncoes = 'Todas as Funções',
+  Assassino = 'Assassinos',
+  Atirador = 'Atiradores',
+  Mago = 'Magos',
+  Tanque = 'Tanques',
+  Suporte = 'Suportes',
+}
+
 @Component({
   selector: 'app-champion-content',
   templateUrl: './champion-content.component.html',
@@ -26,6 +35,10 @@ export class ChampionContentComponent implements OnInit {
   private pageSize: number = 16;
 
   public loadedContent: boolean = false;
+
+  options: string[] = Object.values(roleEnums);;
+  inicialRoleOptions: string = roleEnums.TodasFuncoes;
+  inicialDificultyOptions: string = '';
 
   constructor(private cardService: CardChampionsService) {
     this.urlImage = this.cardService.getImageUrl();
@@ -62,5 +75,10 @@ export class ChampionContentComponent implements OnInit {
       if (this.currentPage == totalPages)
         this.showButton = false;
     }
+  }
+
+  onCancel(event: Event) {
+    event.stopPropagation();
+    this.inicialDificultyOptions = '';
   }
 }
