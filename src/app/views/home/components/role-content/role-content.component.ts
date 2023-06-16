@@ -70,7 +70,7 @@ export class RoleContentComponent implements OnInit {
     {
       roleImage: {
         background: "./assets/img/role-icons/tank-silver.png",
-        image: "./assets/img/renders/garen-render.png"
+        image: "./assets/img/renders/nunu-render.png"
       },
       roleText: {
         title: "Tanques",
