@@ -8,6 +8,7 @@
 
     <mat-spinner class="champion-content__spinner" *ngIf=" !loadedContent"></mat-spinner>
     <div *ngIf="loadedContent" class="champion-content__card-container">
+        <app-content-not-found *ngIf="displayedChampions.length <= 0"></app-content-not-found>
         <app-card *ngFor="let champion of displayedChampions" [urlImage]="urlImage" [card]="champion"></app-card>
     </div>
     <app-btn-show-more *ngIf="showButton" [btnText]="btnText" (click)="showMoreButton()"></app-btn-show-more>
