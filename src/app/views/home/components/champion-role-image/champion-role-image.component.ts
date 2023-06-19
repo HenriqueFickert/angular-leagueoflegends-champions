@@ -7,7 +7,7 @@ import { roleChampionImage } from 'src/app/models/role';
   styleUrls: ['./champion-role-image.component.scss']
 })
 export class ChampionRoleImageComponent {
-  @Input() public roleChampionImage: roleChampionImage | undefined;
+  @Input() public roleChampionImage!: roleChampionImage;
 
   public isLoadedBg: boolean = false;
   public isLoadedImage: boolean = false;

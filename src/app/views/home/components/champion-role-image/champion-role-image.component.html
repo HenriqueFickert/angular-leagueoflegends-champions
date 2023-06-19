@@ -1,7 +1,7 @@
 <div class=" role-image-container">
     <img [ngClass]="{'skeleton': !isLoadedBg}" class="role-image-container__background"
-        src="{{roleChampionImage?.background}}" alt="roleicone" draggable="false" (load)="onLoadedBg()" />
+        src="{{roleChampionImage.background}}" alt="roleicone" draggable="false" (load)="onLoadedBg()" />
     <mat-spinner class="role-image-container__image" *ngIf=" !isLoadedImage"></mat-spinner>
-    <img class="role-image-container__image" src="{{roleChampionImage?.image}}" alt="personagemrender" draggable="false"
+    <img class="role-image-container__image" src="{{roleChampionImage.image}}" alt="personagemrender" draggable="false"
         (load)="onLoadedImage()" />
 </div>

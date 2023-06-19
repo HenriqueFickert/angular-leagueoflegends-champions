@@ -7,5 +7,5 @@ import { roleChampionText } from 'src/app/models/role';
   styleUrls: ['./champion-role-text.component.scss']
 })
 export class ChampionRoleTextComponent {
-  @Input() public roleChampionText: roleChampionText | undefined;
+  @Input() public roleChampionText!: roleChampionText;
 }

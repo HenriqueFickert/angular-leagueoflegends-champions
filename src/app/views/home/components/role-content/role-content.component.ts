@@ -80,7 +80,7 @@ export class RoleContentComponent implements OnInit {
   ];
 
   public selectedTabIndex: number = 0;
-  @ViewChild(MatTabGroup) private tabGroup: MatTabGroup | undefined;
+  @ViewChild(MatTabGroup) private tabGroup!: MatTabGroup;
   private tabTimer: number = 5000;
   private intervalId: any;
 
@@ -101,7 +101,7 @@ export class RoleContentComponent implements OnInit {
   }
 
   private automaticChangeTab() {
-    const tabLength = this.tabGroup?._tabs.length || 0;
+    const tabLength = this.tabGroup._tabs.length || 0;
     this.selectedTabIndex++;
     this.changeTimerInverval(5000);
 
