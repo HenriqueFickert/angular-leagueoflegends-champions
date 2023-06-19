@@ -1,0 +1,33 @@
+<form [formGroup]="form" class="form-container">
+    <mat-form-field color="accent">
+        <mat-icon matSuffix>search</mat-icon>
+        <input matInput placeholder="Buscar" formControlName="searchText">
+    </mat-form-field>
+
+    <mat-form-field color="accent">
+        <mat-select placeholder="Todas as Funções" formControlName="roleInput">
+            <mat-option *ngFor="let option of options" [value]="option"> {{option}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field color="accent">
+        <mat-select placeholder="Dificuldade" formControlName="dificultyInput" class="form-container__Select">
+            <mat-select-trigger>
+
+                <mat-icon
+                    *ngIf="selectedDifficulty === '1' || selectedDifficulty === '2' || selectedDifficulty ==='3'">eject</mat-icon>
+                <mat-icon *ngIf="selectedDifficulty === '2' || selectedDifficulty ==='3'">eject</mat-icon>
+                <mat-icon *ngIf="selectedDifficulty === '3'">eject</mat-icon>
+
+                <button (click)="onCancel($event)" class="form-container__Select__close-button">
+                    <mat-icon>cancel</mat-icon>
+                </button>
+
+            </mat-select-trigger>
+            <mat-option value="1"><mat-icon>eject</mat-icon></mat-option>
+            <mat-option value="2"><mat-icon>eject</mat-icon><mat-icon>eject</mat-icon></mat-option>
+            <mat-option
+                value="3"><mat-icon>eject</mat-icon><mat-icon>eject</mat-icon><mat-icon>eject</mat-icon></mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>

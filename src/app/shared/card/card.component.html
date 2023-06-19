@@ -1,11 +1,11 @@
 <mat-card class="card">
     <mat-spinner *ngIf="!isImageLoaded"></mat-spinner>
     <mat-card-content>
-        <img mat-card-image src="{{urlImage}}{{card?.id}}_0.jpg" (load)="onImageLoad()"
-            alt='champion-splash-{{card?.name}}' draggable="false" />
+        <img mat-card-image src="{{urlImage}}{{card.id}}_0.jpg" (load)="onImageLoad()"
+            alt='champion-splash-{{card.name}}' draggable="false" />
     </mat-card-content>
     <mat-card-footer class="card__footer">
-        <mat-card-title>{{card?.name}}</mat-card-title>
+        <mat-card-title>{{card.name}}</mat-card-title>
         <div class="card__footer__role-icon-container">
             <img *ngFor="let tag of card?.tags" [src]="getPathByName(tag)" alt='role-{{tag}}' draggable="false">
         </div>

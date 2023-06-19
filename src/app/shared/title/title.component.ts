@@ -7,7 +7,5 @@ import { title } from 'src/app/models/title';
   styleUrls: ['./title.component.scss']
 })
 export class TitleComponent {
-
-  @Input() public title: title | undefined;
-
+  @Input() public title!: title;
 }

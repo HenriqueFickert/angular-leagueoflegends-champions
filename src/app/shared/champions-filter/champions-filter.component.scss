@@ -1,0 +1,66 @@
+@import "../../scss/global.scss";
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    mat-form-field {
+        width: 100%;
+        margin: 5px;
+    }
+
+    mat-form-field {
+        margin: 5px;
+    }
+
+    mat-icon {
+        color: var(--gold);
+    }
+
+    &__Select {
+        &__close-button {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            justify-content: space-between;
+
+            mat-icon {
+                font-size: 16px;
+                color: var(--silver);
+            }
+        }
+    }
+}
+
+::ng-deep {
+
+    .mat-mdc-option .mat-icon,
+    .mat-mdc-option .mat-pseudo-checkbox-full {
+        margin-right: 0 !important;
+    }
+
+    .mat-mdc-form-field-bottom-align::before {
+        display: unset !important;
+    }
+
+    .mat-mdc-form-field-infix {
+        min-height: unset !important;
+        max-height: 50px;
+    }
+
+    .mdc-list-item--selected>mat-icon {
+        color: var(--gold);
+    }
+}
+
+@media #{$mobile} {
+    .form-container {
+        flex-direction: column;
+    }
+}

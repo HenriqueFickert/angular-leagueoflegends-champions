@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class BtnShowMoreComponent {
 
-  @Input() public btnText: string = '';
+  @Input() public btnText!: string;
 
 }
