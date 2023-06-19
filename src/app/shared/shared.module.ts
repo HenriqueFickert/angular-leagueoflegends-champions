@@ -16,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { ContentNotFoundComponent } from './content-not-found/content-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     SubtitleComponent,
     CardComponent,
     BtnShowMoreComponent,
-    ChampionsFilterComponent
+    ChampionsFilterComponent,
+    ContentNotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +46,8 @@ import { FormsModule } from '@angular/forms';
     SubtitleComponent,
     CardComponent,
     BtnShowMoreComponent,
-    ChampionsFilterComponent
+    ChampionsFilterComponent,
+    ContentNotFoundComponent
   ]
 })
 export class SharedModule { }
