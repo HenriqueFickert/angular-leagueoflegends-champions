@@ -58,8 +58,10 @@ export class ChampionContentComponent implements OnInit {
     const startIndex = (this.currentPage - 1) * this.pageSize;
     const endIndex = startIndex + this.pageSize;
 
-    if (this.currentPage == this.totalPages)
+    if (this.currentPage == this.totalPages || this.totalPages == 0)
       this.showButton = false;
+    else
+      this.showButton = true;
 
     return this.filteredChampions.slice(startIndex, endIndex);
   }
