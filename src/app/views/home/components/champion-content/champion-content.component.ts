@@ -74,6 +74,7 @@ export class ChampionContentComponent implements OnInit {
   }
 
   applyFilters(text: string, role: string, dificulty: string) {
+    this.currentPage = 1;
     this.filteredChampions = (this.champions || []).filter(objeto =>
       this.searchFilter(objeto, text) &&
       this.roleFilter(objeto, role) &&
