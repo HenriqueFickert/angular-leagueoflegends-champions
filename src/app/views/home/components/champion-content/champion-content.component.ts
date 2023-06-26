@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { debounceTime } from 'rxjs';
 import { DificultyHelper } from 'src/app/helpers/dificultyHelper';
 import { RoleTagHelper } from 'src/app/helpers/roleTagHelper';
 import { champion } from 'src/app/models/responses/champion';
@@ -35,23 +37,26 @@ export class ChampionContentComponent implements OnInit {
 
   constructor(private cardService: CardChampionsService) {
     this.urlImage = this.cardService.getImageUrl();
-  }
-
-  ngOnInit() {
     this.getAllCards();
   }
 
+  ngOnInit() {
+
+  }
+
   getAllCards() {
-    this.cardService.getChampions('champion.json').subscribe({
-      next: (data: champion[]) => {
-        this.champions = data;
-        this.filteredChampions = data;
-        this.totalPages = Math.ceil(this.filteredChampions.length / this.pageSize);
-        this.displayedChampions = this.getCurrentPage();
-        this.loadedContent = true;
-      },
-      error: (error) => console.error(error)
-    });
+    this.cardService.getChampions('champion.json')
+      .pipe(takeUntilDestroyed())
+      .subscribe({
+        next: (data: champion[]) => {
+          this.champions = data;
+          this.filteredChampions = data;
+          this.totalPages = Math.ceil(this.filteredChampions.length / this.pageSize);
+          this.displayedChampions = this.getCurrentPage();
+          this.loadedContent = true;
+        },
+        error: (error) => console.error(error)
+      });
   }
 
   getCurrentPage(): champion[] {
