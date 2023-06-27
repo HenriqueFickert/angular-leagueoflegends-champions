@@ -1,4 +1,4 @@
-<mat-card class="card">
+<mat-card class="card" [ngStyle]="{'justify-content': !isImageLoaded ? 'center' : 'initial'}">
     <mat-spinner *ngIf="!isImageLoaded"></mat-spinner>
     <mat-card-content>
         <img mat-card-image src="{{urlImage}}{{card.id}}_0.jpg" (load)="onImageLoad()"
